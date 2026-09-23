@@ -1,0 +1,30 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Local IDE files
+.vs/
+.vscode/
+*.sln
+compile_commands.json
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Temp
+
+
+################################################################
+# Protection from garbage that is shoved into asset packs
+*.zip
+*.rar
+*.7zip
+*.fbx
+*.blend
+*.psd
+*.jpeg
+*.jpg
+*.bmp

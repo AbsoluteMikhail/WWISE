@@ -16,6 +16,16 @@ Thumbs.db
 
 # Temp
 
+# GITIGNORE template for Wwise Project
+.backup*
+.cache*
+*.akd
+*.prof
+*.validationcache
+*.wsettings
+AkWwiseProjectData.asset
+IncrementalSoundBankData.xml
+
 
 ################################################################
 # Protection from garbage that is shoved into asset packs

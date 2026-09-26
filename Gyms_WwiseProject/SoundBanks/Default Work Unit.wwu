@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8828E023-FB72-4C34-A0F2-BC976F4835C9}" SchemaVersion="133">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{8828E023-FB72-4C34-A0F2-BC976F4835C9}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="UserDefinedBank" ID="{F9AA23B0-2C6A-43F5-8449-E0CB8195F17D}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_UserDefinedStreamingSFX" ID="{AA333ABB-E28F-445F-9173-C12E547FF6A1}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_UserDefinedBankSFX" ID="{486C7023-33C0-4761-9A13-39A6FC6BD4EB}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Localized_MediaOnly" ID="{B235F5A7-7739-40C3-B1E1-D8A7217550BA}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Language_Media_AnotherBank_Ref" ID="{33958F84-BE24-4167-8212-CA8975D75E1E}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="4"/>
+						<ObjectRef Name="Play_Language_Media_AnotherBank" ID="{722D524A-BB6B-4D14-B8A8-DAFE89CDC37B}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="4"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="DynamicDialogue" ID="{11020EE4-E946-41E8-8505-A3D35C6DC749}">
+					<ObjectInclusionList>
+						<ObjectRef Name="FallbackPathPlaylist" ID="{70FA481B-31A8-40AF-9E33-439AADB86EE9}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ModifyPlaylistNoDefaultFallback" ID="{1FFF1140-6EB9-4203-85AD-727A3393E9D3}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="OrderedPlaylist" ID="{15D123DB-6102-4358-8FC6-ECFD3866ABB1}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ChainPlaylist" ID="{C9128F3D-94E1-4372-A6F0-C215812EA658}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ResolvePlaylistNoDefaultFallback" ID="{B3194AC5-9356-4BBE-A6FE-E22B733D5849}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ModifyPlaylist" ID="{92A0A88C-1E74-4C6C-B593-BA2FBC51433B}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PlaylistManipulation" ID="{9BA5EB0D-E1EC-4D85-B805-C42CB4358443}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ProbabilityPlaylist" ID="{0ED4C7BD-9E9D-4DB0-8F89-212E51D91C32}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="WeightsPlaylist" ID="{92836F8D-EDAC-4E4B-A0EF-68830D800400}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ResolvePlaylist" ID="{9732E637-4350-4FFA-BF34-91148E896D1C}" WorkUnitID="{BDB25378-3A1E-4F49-9ABB-9E035E654DD8}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Localized_NoMedia" ID="{5250E8E0-2F3B-4304-84CC-F8D6C0F72988}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Language_Media_AnotherBank_Ref" ID="{33958F84-BE24-4167-8212-CA8975D75E1E}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="3"/>
+						<ObjectRef Name="Play_Language_Media_AnotherBank" ID="{722D524A-BB6B-4D14-B8A8-DAFE89CDC37B}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="3"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Localized_Regular" ID="{10FFC56F-A7E8-412D-88B9-BF4E6FA3CC6F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Language_Media_Bank_Ref" ID="{65BFF1AF-EEB8-4619-A251-D54E8DA9EB20}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Language_Media_Bank" ID="{4D5CB16F-0223-4D55-B169-D2DBC11256BF}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<Folder Name="SharedMediasInBank" ID="{2C954356-0180-4648-BF01-D763FCAC441D}" ShortID="1062364382">
+					<ChildrenList>
+						<SoundBank Name="SharedMediaSoundBank_01" ID="{CC3B11DA-7DC2-4CDA-BD71-0FC3DB5BF83E}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Hello_SFX" ID="{F75C4417-F29C-432F-B11E-80AFF6BD297A}" WorkUnitID="{83C7F172-2885-4077-9671-3FE56F82D16C}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="SharedMediaEvent_01" ID="{1FA3FF4B-D411-4CD6-BB74-80ADA17D8C5D}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="SharedMediaSoundBank_02" ID="{3ED654E7-8005-45B7-8536-4B8242BAB7B9}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Hello_SFX" ID="{F75C4417-F29C-432F-B11E-80AFF6BD297A}" WorkUnitID="{83C7F172-2885-4077-9671-3FE56F82D16C}" Origin="Manual" Filter="7"/>
+								<ObjectRef Name="SharedMediaEvent_02" ID="{2B348EDF-0597-4D07-89CD-C8D9CBDCD900}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList>
+								<ObjectRef Name="Hello" ID="{89097BB6-6FCA-4CB5-969B-2F523907E3E4}" WorkUnitID="{83C7F172-2885-4077-9671-3FE56F82D16C}"/>
+							</ObjectExclusionList>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<SoundBank Name="AudioDeviceSoundBank" ID="{F34C88E6-89B4-43F4-94FE-768176293ACA}">
+					<ObjectInclusionList>
+						<ObjectRef Name="AudioDeviceEvent" ID="{C89E3159-6164-466C-BE4D-EF3A31390A2F}" WorkUnitID="{4F7BD44B-0FCF-4A30-952D-A6380CF69475}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

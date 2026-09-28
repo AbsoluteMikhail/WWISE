@@ -27,7 +27,7 @@
 | Wwise Authoring | 2025.1.11.9262 |
 | Wwise Unreal Integration | 2025.1.11.9262.4509 |
 
-Для клонирования нужен [Git LFS](https://git-lfs.com/): крупные исходные звуки и библиотеки SDK хранятся через него. После установки выполните:
+Для клонирования нужен [Git LFS](https://git-lfs.com/): большой тестовый звук `LargeMedia.wav` хранится через него. SDK Wwise устанавливается отдельно через Audiokinetic Launcher. После установки Git LFS выполните:
 
 ```sh
 git lfs install
@@ -62,7 +62,7 @@ cd WWISE
 
 Кэши, временные файлы, локальные настройки редакторов и `Gyms_WwiseProject/GeneratedSoundBanks` исключены через `.gitignore`. После клонирования генерируйте банки по инструкции выше; повторяйте генерацию после изменений звука в Wwise.
 
-Библиотеки SDK в `Plugins/WwiseSoundEngine/ThirdParty` нужны для сборки интеграции и пока хранятся в Git. Исходный `LargeMedia.wav` также сохранён: это большой тестовый файл Gyms, а не кэш.
+SDK в `Plugins/WwiseSoundEngine/ThirdParty` исключён из Git и Git LFS. Audiokinetic Launcher устанавливает его при интеграции Wwise в проект — этот шаг обязателен после клонирования. Исходный `LargeMedia.wav` сохранён в LFS: это большой тестовый файл Gyms, а не кэш.
 
 ## Больше примеров и самостоятельная практика
 

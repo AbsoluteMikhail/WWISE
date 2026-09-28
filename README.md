@@ -27,6 +27,16 @@
 | Wwise Authoring | 2025.1.11.9262 |
 | Wwise Unreal Integration | 2025.1.11.9262.4509 |
 
+Для клонирования нужен [Git LFS](https://git-lfs.com/): крупные исходные звуки и библиотеки SDK хранятся через него. После установки выполните:
+
+```sh
+git lfs install
+git clone git@github.com:AbsoluteMikhail/WWISE.git
+cd WWISE
+```
+
+При обычном клонировании файлы LFS скачиваются автоматически. Если проект уже склонирован без них, выполните `git lfs pull` в корне проекта. Для первого запуска используйте Git clone, а не ZIP-архив репозитория.
+
 1. Установите Unreal Engine и Wwise Authoring соответствующих версий. Через Audiokinetic Launcher интегрируйте Wwise указанной версии в `WWISE.uproject`: это также установит готовые модули плагина под ваш движок. Выберите существующий Wwise-проект `Gyms_WwiseProject/Gyms.wproj`.
 2. Запустите **`GenerateSoundBanks.cmd`** двойным щелчком. Скрипт найдёт Wwise указанной версии через `WWISEROOT` или в стандартных папках Audiokinetic и сгенерирует банки для Windows/en_US. Если Wwise установлен в другом месте, укажите папку его установки в переменной окружения `WWISEROOT`.
 3. Для редактирования звука откройте `Gyms_WwiseProject/Gyms.wproj` в Wwise. Банки можно также генерировать вручную для **Windows**, выбрав **en_US** и SFX; папка вывода — `Gyms_WwiseProject/GeneratedSoundBanks`.

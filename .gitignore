@@ -3,6 +3,21 @@ Binaries/
 DerivedDataCache/
 Intermediate/
 Saved/
+FileOpenOrder/
+
+# Local cooked/staged output and Unreal IDE tooling
+/LocalBuilds/
+/.idea/
+/.vsconfig.local
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln.docstates
 
 # Local IDE files
 .vs/
@@ -13,8 +28,11 @@ compile_commands.json
 # OS metadata
 .DS_Store
 Thumbs.db
+Desktop.ini
 
 # Temp
+__pycache__/
+*.pyc
 
 # GITIGNORE template for Wwise Project
 .backup*
@@ -25,10 +43,19 @@ Thumbs.db
 *.wsettings
 AkWwiseProjectData.asset
 IncrementalSoundBankData.xml
+SoundBankInfoCache.dat
+
+# Generated locally with Wwise Authoring; keep Originals and Work Units tracked.
+/Gyms_WwiseProject/GeneratedSoundBanks/
+
+# Do not ignore *.dll / *.lib globally: Wwise ThirdParty contains required SDK files.
+# Keep Content/WwiseAudio and Content/__ExternalActors__ in source control.
 
 
 ################################################################
 # Protection from garbage that is shoved into asset packs
+# Existing project policy: these source-art/archive formats are excluded.
+# Add a path-specific exception if a lesson needs an original file of these types.
 *.zip
 *.rar
 *.7zip

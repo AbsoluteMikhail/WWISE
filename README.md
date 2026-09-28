@@ -27,9 +27,9 @@
 | Wwise Authoring | 2025.1.11.9262 |
 | Wwise Unreal Integration | 2025.1.11.9262.4509 |
 
-1. Установите Unreal Engine и Wwise соответствующих версий. Для настройки интеграции используйте Audiokinetic Launcher.
-2. Откройте `Gyms_WwiseProject/Gyms.wproj` в Wwise. Это Wwise-проект, подключённый к Unreal в настройках репозитория.
-3. Сгенерируйте SoundBanks для **Windows**, выбрав язык **en_US** и SFX. Папка вывода — `Gyms_WwiseProject/GeneratedSoundBanks`.
+1. Установите Unreal Engine и Wwise Authoring соответствующих версий. Через Audiokinetic Launcher интегрируйте Wwise указанной версии в `WWISE.uproject`: это также установит готовые модули плагина под ваш движок. Выберите существующий Wwise-проект `Gyms_WwiseProject/Gyms.wproj`.
+2. Запустите **`GenerateSoundBanks.cmd`** двойным щелчком. Скрипт найдёт Wwise указанной версии через `WWISEROOT` или в стандартных папках Audiokinetic и сгенерирует банки для Windows/en_US. При нестандартном пути запустите из терминала: `GenerateSoundBanks.cmd -WwiseRoot "..\Wwise_2025.1.11.9262"`.
+3. Для редактирования звука откройте `Gyms_WwiseProject/Gyms.wproj` в Wwise. Банки можно также генерировать вручную для **Windows**, выбрав **en_US** и SFX; папка вывода — `Gyms_WwiseProject/GeneratedSoundBanks`.
 4. Откройте `WWISE.uproject` в Unreal Engine и учебную карту `Content/WWISE/Levels/Game`.
 5. Начните с простого актора с AkComponent: вызовите `Post Ak Event` для события `PostEvent_Event`. Затем попробуйте Switch и RTPC на том же компоненте.
 
@@ -43,9 +43,16 @@
 | `Content/WWISE` | Учебная карта и Blueprints |
 | `Content/WwiseAudio` | Ассеты интеграции Wwise: события, параметры и другие объекты |
 | `Gyms_WwiseProject` | Локальная учебная копия Wwise-проекта из Audiokinetic Gyms |
-| `WWISE_WwiseProject` | Первоначальный пустой Wwise-проект; для занятий используется копия Gyms |
 
 Названия событий для первых упражнений, детали переноса и генерации банков описаны в [README учебной копии Wwise](Gyms_WwiseProject/README-Учебный-проект.md).
+
+## Что храним в Git
+
+В репозитории храним карту, Blueprints, ассеты `Content/WwiseAudio`, настройки проекта, Wwise Work Units и исходные звуки из `Originals` и `ExternalSources`. Файлы `Content/__ExternalActors__` — часть карты, их тоже нужно коммитить.
+
+Кэши, временные файлы, локальные настройки редакторов и `Gyms_WwiseProject/GeneratedSoundBanks` исключены через `.gitignore`. После клонирования генерируйте банки по инструкции выше; повторяйте генерацию после изменений звука в Wwise.
+
+Библиотеки SDK в `Plugins/WwiseSoundEngine/ThirdParty` нужны для сборки интеграции и пока хранятся в Git. Исходный `LargeMedia.wav` также сохранён: это большой тестовый файл Gyms, а не кэш.
 
 ## Больше примеров и самостоятельная практика
 

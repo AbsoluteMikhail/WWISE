@@ -1,20 +1,21 @@
-# Wwise Gyms — локальная учебная копия
+# Wwise Gyms — учебный проект
 
-Источник: `WwiseProject (https://github.com/audiokinetic/Gyms)`. Исходный проект не изменялся.
-Скопирован весь Wwise-проект с Originals и ExternalSources, без исходного кэша и пользовательских настроек. Unreal-ассеты Gyms не переносились.
+Источник — папка `WwiseProject` из [официального репозитория Audiokinetic Gyms](https://github.com/audiokinetic/Gyms). Здесь используется её учебная копия с исходными звуками из `Originals` и `ExternalSources`. Unreal-сцены оригинального Gyms в неё не входят.
 
-Копия обновлена с Wwise 2025.1.3.8968 до установленного Wwise 2025.1.11.9262.
+Копия адаптирована для Wwise 2025.1.11.9262.
 Unreal-проект WWISE использует UE 5.7 и интеграцию Wwise 2025.1.11.9262.4509.
 
 ## Что открыть
 
-- Wwise: `Gyms.wproj` в этой папке.
-- Unreal: `../WWISE.uproject`.
-- Банки: `GeneratedSoundBanks/Windows`, сгенерированы для Windows и языка en_US (включая SFX).
-- Привязка к копии записана в `Config/DefaultGame.ini` Unreal-проекта.
-- В `Content/WwiseAudio` созданы 197 Unreal-ассетов, включая InitBank, события, Switch, RTPC и акустические текстуры. InitBank назначен в настройках.
-- Исходный пустой Wwise-проект оставлен в `WWISE_WwiseProject`.
-- Резервная копия прежнего DefaultGame.ini: `Saved/Backups/GymsImport_20260926_130127/DefaultGame.ini`.
+Пути ниже указаны относительно этой папки:
+
+- Wwise: [Gyms.wproj](Gyms.wproj).
+- Unreal: [WWISE.uproject](../WWISE.uproject).
+- Банки: `GeneratedSoundBanks/Windows`; генерируются локально для Windows и языка en_US (включая SFX).
+- Настройки интеграции: [DefaultGame.ini](../Config/DefaultGame.ini).
+- Unreal-ассеты Wwise: `../Content/WwiseAudio`, включая InitBank, события, Switch, RTPC и акустические текстуры.
+
+Установка и первый запуск описаны в [основном README](../README.md).
 
 ## Примеры для первого занятия
 
@@ -35,24 +36,12 @@ Gyms содержит технические тесты, синтетическ�
 
 ## Генерация
 
-В Wwise выберите Windows и en_US и сгенерируйте SoundBanks. Пути генерации в копии изменены с папки Unity на локальную GeneratedSoundBanks. External Sources выводятся в GeneratedSoundBanks/<Platform>/ExternalSources.
+Запустите [GenerateSoundBanks.cmd](../GenerateSoundBanks.cmd) из корня репозитория. Скрипт использует установленный Wwise и определяет расположение проекта относительно самого скрипта.
 
-Для повторной генерации из PowerShell:
+Альтернатива — открыть `Gyms.wproj` в Wwise, выбрать Windows и en_US и сгенерировать SoundBanks. Папка вывода — `GeneratedSoundBanks`, External Sources выводятся в `GeneratedSoundBanks/<Platform>/ExternalSources`.
 
-```powershell
-& "$env:WWISEROOT\Authoring\x64\Release\bin\WwiseConsole.exe" generate-soundbank './Gyms_WwiseProject/Gyms.wproj' --platform Windows --language en_US --no-source-control --abort-on-load-issues
-```
+Банки не хранятся в Git: после клонирования и изменений звука их нужно генерировать заново.
 
 Копия полная: файл Originals/SFX/LargeMedia.wav занимает около 1 ГБ и нужен только для теста большого медиа. Он сохранён вместе с остальными зависимостями; для занятия его использовать не требуется.
 
-При миграции WwiseConsole создал лишний некорректный пустой файл Sidechain Mixes.wwu в корне. Он перенесён в резервную папку рядом с прежним DefaultGame.ini; исходная корректная Sidechain Mixes/Default Work Unit.wwu сохранена. После этого загрузка проекта и генерация банков прошли без диагностик ошибок.
-
-## Проверка переноса
-
-- Все 79 WAV-файлов в Originals и ExternalSources сверены с источником по SHA-256: совпадают.
-- WwiseConsole 2025.1.11 успешно загружает проект и генерирует банки Windows/en_US.
-- Unreal 5.7 прочитал метаданные GeneratedSoundBanks и создал перечисленные ассеты. Все события из учебной таблицы присутствуют.
-- Служебный тест TooLongPathEvent остался в Wwise, но его Unreal-ассет не создан: специально длинный путь превышает ограничение 260 символов. Остальные ассеты импортированы. Поэтому полный WwiseReconcile завершился с ненулевым кодом, несмотря на создание нужных учебных ассетов.
-- Командная проверка Unreal выполнялась без звука; прослушивание в PIE ещё не проводилось. Для изолированной проверки использовался временный кэш в памяти, поскольку песочница не разрешает запись в общий пользовательский DDC; постоянные настройки DDC не изменялись.
-
-Логи: `Saved/Logs/Gyms-SoundBank-Generation.log` и `Saved/Logs/Gyms-Reconcile.log` в Unreal-проекте.
+Служебный тест Gyms `TooLongPathEvent` использует специально длинный путь. Его Unreal-ассет не включён в учебный проект; для упражнений из таблицы он не требуется.

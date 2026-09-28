@@ -28,7 +28,7 @@
 | Wwise Unreal Integration | 2025.1.11.9262.4509 |
 
 1. Установите Unreal Engine и Wwise Authoring соответствующих версий. Через Audiokinetic Launcher интегрируйте Wwise указанной версии в `WWISE.uproject`: это также установит готовые модули плагина под ваш движок. Выберите существующий Wwise-проект `Gyms_WwiseProject/Gyms.wproj`.
-2. Запустите **`GenerateSoundBanks.cmd`** двойным щелчком. Скрипт найдёт Wwise указанной версии через `WWISEROOT` или в стандартных папках Audiokinetic и сгенерирует банки для Windows/en_US. При нестандартном пути запустите из терминала: `GenerateSoundBanks.cmd -WwiseRoot "..\Wwise_2025.1.11.9262"`.
+2. Запустите **`GenerateSoundBanks.cmd`** двойным щелчком. Скрипт найдёт Wwise указанной версии через `WWISEROOT` или в стандартных папках Audiokinetic и сгенерирует банки для Windows/en_US. Если Wwise установлен в другом месте, укажите папку его установки в переменной окружения `WWISEROOT`.
 3. Для редактирования звука откройте `Gyms_WwiseProject/Gyms.wproj` в Wwise. Банки можно также генерировать вручную для **Windows**, выбрав **en_US** и SFX; папка вывода — `Gyms_WwiseProject/GeneratedSoundBanks`.
 4. Откройте `WWISE.uproject` в Unreal Engine и учебную карту `Content/WWISE/Levels/Game`.
 5. Начните с простого актора с AkComponent: вызовите `Post Ak Event` для события `PostEvent_Event`. Затем попробуйте Switch и RTPC на том же компоненте.

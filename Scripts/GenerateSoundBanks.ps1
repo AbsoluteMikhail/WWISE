@@ -29,7 +29,7 @@ try {
     }
 
     if (-not $console) {
-        throw "Install Wwise Authoring $requiredVersion using Audiokinetic Launcher. For a custom install location, run GenerateSoundBanks.cmd -WwiseRoot ..\Wwise_$requiredVersion"
+        throw "Install Wwise Authoring $requiredVersion using Audiokinetic Launcher. Set WWISEROOT to its installation folder, or pass that folder with -WwiseRoot."
     }
 
     $project = Join-Path $projectRoot 'Gyms_WwiseProject\Gyms.wproj'

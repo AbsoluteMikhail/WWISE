@@ -20,6 +20,8 @@ FileOpenOrder/
 *.sln.docstates
 
 # Local IDE files
+# Machine-specific editor launch shortcut (kept locally).
+/Launch_DDC=InstalledNoZenLocalFallback.bat
 .vs/
 .vscode/
 *.sln

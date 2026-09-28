@@ -62,8 +62,8 @@ if __name__ == "__main__":
     if args['regenerate']:
         forceRegeneration = True
 
-    large_wav_path = path.join(dir_path, "Originals", "SFX", "LargeMedia.wav")
-    generate_wav(large_wav_path, 500000000)
+    # LargeMedia.wav is intentionally omitted from this teaching project.
+    # See Originals/SFX/LargeMedia-README.md; keep generating only short samples.
 
     for i in range(10):
         file_name = "ShortMedia_{}.wav".format(i)

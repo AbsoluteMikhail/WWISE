@@ -27,15 +27,12 @@
 | Wwise Authoring | 2025.1.11.9262 |
 | Wwise Unreal Integration | 2025.1.11.9262.4509 |
 
-Для клонирования нужен [Git LFS](https://git-lfs.com/): большой тестовый звук `LargeMedia.wav` хранится через него. SDK Wwise устанавливается отдельно через Audiokinetic Launcher. После установки Git LFS выполните:
+Для клонирования достаточно обычного Git — Git LFS не требуется. SDK Wwise устанавливается через Audiokinetic Launcher, а гигабайтный тестовый звук из Gyms исключён:
 
 ```sh
-git lfs install
 git clone git@github.com:AbsoluteMikhail/WWISE.git
 cd WWISE
 ```
-
-При обычном клонировании файлы LFS скачиваются автоматически. Если проект уже склонирован без них, выполните `git lfs pull` в корне проекта. Для первого запуска используйте Git clone, а не ZIP-архив репозитория.
 
 1. Установите Unreal Engine и Wwise Authoring соответствующих версий. Через Audiokinetic Launcher интегрируйте Wwise указанной версии в `WWISE.uproject`: это также установит готовые модули плагина под ваш движок. Выберите существующий Wwise-проект `Gyms_WwiseProject/Gyms.wproj`.
 2. Запустите **`GenerateSoundBanks.cmd`** двойным щелчком. Скрипт найдёт Wwise указанной версии через `WWISEROOT` или в стандартных папках Audiokinetic и сгенерирует банки для Windows/en_US. Если Wwise установлен в другом месте, укажите папку его установки в переменной окружения `WWISEROOT`.
@@ -62,7 +59,7 @@ cd WWISE
 
 Кэши, временные файлы, локальные настройки редакторов и `Gyms_WwiseProject/GeneratedSoundBanks` исключены через `.gitignore`. После клонирования генерируйте банки по инструкции выше; повторяйте генерацию после изменений звука в Wwise.
 
-SDK в `Plugins/WwiseSoundEngine/ThirdParty` исключён из Git и Git LFS. Audiokinetic Launcher устанавливает его при интеграции Wwise в проект — этот шаг обязателен после клонирования. Исходный `LargeMedia.wav` сохранён в LFS: это большой тестовый файл Gyms, а не кэш.
+SDK в `Plugins/WwiseSoundEngine/ThirdParty` исключён из Git. Audiokinetic Launcher устанавливает его при интеграции Wwise в проект — этот шаг обязателен после клонирования. Неиспользуемый `LargeMedia.wav` размером около 1 ГБ удалён; вместо него оставлена [пометка о большом тестовом файле](Gyms_WwiseProject/Originals/SFX/LargeMedia-README.md).
 
 ## Больше примеров и самостоятельная практика
 

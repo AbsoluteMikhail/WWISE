@@ -73,7 +73,7 @@
 						</AudioFileSource>
 						<AudioFileSource Name="LargeMedia" ID="{F9ADEDDE-5E16-468B-9F82-090849A3E702}">
 							<Language>SFX</Language>
-							<AudioFile>LargeMedia.wav</AudioFile>
+							<AudioFile>ShortMedia_0.wav</AudioFile>
 							<MediaIDList>
 								<MediaID ID="433934266"/>
 							</MediaIDList>

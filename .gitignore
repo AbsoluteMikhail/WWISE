@@ -49,6 +49,8 @@ SoundBankInfoCache.dat
 
 # Generated locally with Wwise Authoring; keep Originals and Work Units tracked.
 /Gyms_WwiseProject/GeneratedSoundBanks/
+# Upstream large-media stress test is omitted from this teaching project.
+/Gyms_WwiseProject/Originals/SFX/LargeMedia.wav
 
 # Wwise SDK is installed locally through Audiokinetic Launcher.
 /Plugins/WwiseSoundEngine/ThirdParty/
